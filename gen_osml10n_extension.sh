@@ -20,7 +20,7 @@ done
 if ! [ -f "country_osm_grid.sql" ]; then
   rm -f country_osm_grid.sql
   echo -n "Trying to download country_grid.sql.gz from nominatim.org... "
-  curl -s http://www.nominatim.org/data/country_grid.sql.gz |gzip -d >country_osm_grid.sql
+  curl -s https://github.com/chenmiaowei/Resource/raw/main/country_grid.sql.gz |gzip -d >country_osm_grid.sql
 
   if ! [ -s country_osm_grid.sql ]; then
     rm -f country_osm_grid.sql
